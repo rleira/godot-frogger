@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/log_spawn.gd" type="Script" id=1]
+
+[node name="log_spawn" type="Position2D" groups=[
+"log_spawn",
+]]
+
+position = Vector2( -263.526, 86.4934 )
+script = ExtResource( 1 )
+dir = null
+
+[node name="log_spawni" type="Position2D" parent="." index="0"]
+
+position = Vector2( 505.271, 0.598724 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
+

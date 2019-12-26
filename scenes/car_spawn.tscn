@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/car_spawn.gd" type="Script" id=1]
+
+[node name="car_spawn" type="Position2D"]
+editor/display_folded = true
+position = Vector2( -263.526, 105.054 )
+script = ExtResource( 1 )
+
+[node name="car_spawni" type="Position2D" parent="."]
+position = Vector2( 535.271, 0.598724 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
